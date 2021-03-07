@@ -1,0 +1,349 @@
+#content-area {
+    overflow   : auto;
+    width      : 100%;
+    
+    min-height : 100vh;
+}
+
+
+#filter {
+        background : $lightgrey; 
+        width      : 30%;
+        max-width  : 300px;
+        float      : left;
+
+    .inside-content {
+        padding    : 20px;
+        
+    }
+
+    h4 {
+        text-transform : uppercase;
+        margin-bottom  : 25px;
+        font-weight    : 500px;
+        font-size      : 0.9rem;
+              
+    }
+    select {
+        margin-bottom  : 25px;
+        background     : transparent;
+        font-weight    : 500;
+        font-size      : 14px;
+        padding        : 10px;
+        display        : block;
+        color          : #1b1b1b;
+        width          : 100%;
+    }
+
+    .filters {
+        .title {
+            margin-bottom : .9rem;
+            font-size     : 0.9rem;
+            display       : block;
+            color         : $darkgrey;
+        }
+
+        input[type="text"] {
+            border-radius : 5px;
+            margin-bottom : 2.5%;
+            font-size     : 1rem;
+            padding-left  : .4rem .1rem .4rem .1rem;
+            display       : inline-block;
+            width         : 45%;
+        }
+
+        &.extras {
+            label {
+                display : block;
+                width   : 100%;
+                padding : 10px 0;
+
+                input[type="checkbox"] {
+                     
+                    margin-right : 5%;
+                }
+            }
+        }
+    }
+
+   
+    
+     
+}
+
+                /*  
+                    //Listings Styles
+                */
+ 
+   
+#listings {
+     
+    display     : block;
+    width       : 65%;
+    padding     : 20px;
+    background  : $offwhite;
+    margin-left : 30%;
+     
+
+    .search-area {
+        input[type="text"] {
+            width         : 70%;
+            background    : transparent;
+            font-size     : 2rem;
+            border        : none;
+            border-right  : .9px solid $lucidgrey;
+            border-bottom : 1.5px solid $darkgrey;
+            margin-bottom : 20px;
+            color         : $darkgrey;
+        }
+    }
+
+    #sort-area {
+        margin-bottom     : 20px;
+        
+
+        .results {
+            font-size     : .8rem;
+            color         : $darkgrey;
+            display       : inline-block;
+        }
+        
+        .sort-options {
+            float : right;
+
+            select {
+                font-size      : 0.9rem;
+                font-weight    : 300;
+                border         : 1px solid $lightgrey;
+                background     : transparent;
+                padding        : 8px;
+                display        : inline-block;
+                margin-right   : 15px;
+                vertical-align : top;
+            }
+             .view {
+                 display: inline-block;
+                 
+                 
+                    .listing-menu-icon {
+                        margin-right : 15px;
+                        margin-top   : 9px;
+                    }
+             }
+        }
+    }
+
+    .listings-results {
+        margin-bottom : 60px;
+
+        .listing {
+            background : #fff;
+            border-radius : 5px;
+            -webkit-box-shadow: 1px 2px 7px 1px rgba(122,120,120,0.76);
+            box-shadow: 1px 2px 7px 1px rgba(122,120,120,0.76);
+            
+        }
+
+        .listing-img {
+            position   : relative;
+            //padding    : 15px;
+            background : url('https://www.pardeehomes.com/wp-content/uploads/sites/3/2016/06/Escala_2XD_GSS_Desert-Contemporary-Exterior_27.jpg') no-repeat center center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height : 180px;
+            min-width  : 250px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            border-top-left-radius : 5px;
+            border-top-right-radius: 5px;
+            box-shadow: 0px 0px 6px 0px rgba(122,120,120,0.76);
+            transition:  0.4s ease-in-out;
+
+            &:hover {
+                .details {
+                    opacity:1;
+                }
+
+                .adress {
+                    opacity:0;
+                }
+            }
+
+            .adress {
+                transition :  0.7s ease-in-out;
+                position   : absolute;
+                bottom     : 20px;
+                color      : $lightgrey;
+                opacity    : 1;
+            }
+
+            .details {
+                transition   : 0.4s ease-in-out;
+                box-shadow   : 0px 0px 6px 0px rgba(122,120,120,0.76);
+                position     : absolute;
+                padding      : 20px;
+                opacity      : 0;
+                top          : 0;
+                left         : 0;
+                bottom       : 0;
+                right        : 0;
+                background   : linear-gradient(135deg, 
+                             rgba(107,87,178,.8) 0%,
+                             rgba(134,101,211,.8) 37%,
+                             rgba(198,87,195,.8) 66%,
+                             rgba(198,87,195,.8) 95%,
+                             rgba(198,87,195,.8) 95%); 
+
+                .user-img {
+                    width  : 50px;
+                    height : 50px;
+                    border-radius : 50%;
+                    border: 1.5px solid white;
+                    display: inline-block;
+                    background : url(https://semantic-ui.com/images/avatar2/large/matthew.png) no-repeat center center; 
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                    margin-bottom:10px;
+                }
+
+                .user-details {
+                    vertical-align : top;
+                    display        : inline-block;
+                     
+                    margin-left    :25px;
+
+                    .username {
+                        font-weight : 300;
+                        font-size   : 0.9rem;
+                        color       : rgba(255, 255, 255, 1);
+                        display     : block;
+                        margin-top  : 6px;
+                        margin-bottom: 7px;
+                    }
+
+                    .post-date {
+                        color   : rgba(255, 255, 255, .7);
+                        display : block;
+                    }
+                }
+
+                .listing-details {
+                    margin-top    : 20px;
+                    margin-bottom : 10px;
+                     
+                    
+                    .fas {
+                        display: inline-block;
+                        font-size: 18px;
+                       
+                         
+
+                    }
+                    
+                     span {
+                        margin-left: 20px;
+                        margin-bottom:12px;
+                    
+                        display     : inline-block;
+                        font-size   : 0.9rem;
+                        font-weight : 350;
+                        vertical-align: top;
+                        position:relative;
+                        top: 3px;
+                    }  
+                } 
+            }  
+            
+        }
+        
+       
+    }
+}
+
+.bottom-info {
+    display: block;
+    padding: 20px;
+    min-width: 100%;
+    margin-left:50px;
+
+    .rent-price {
+        font-size : 1.1rem;
+        display:block;
+        margin-bottom:10px;
+        color: grey;
+    }
+    .location {
+        font-size: 1.2rem;
+        display:block;
+        color: $lucidgrey;
+        
+    }
+}
+
+.view-button {
+    background: $pink;
+    margin-right:30px;
+    padding: 10px;
+    font-size : .85rem;
+    border-radius: 5px;
+    text-align: center;
+    transition:  0.5s ease-in-out;
+    &:hover {
+        background : black;
+        cursor     : pointer;
+        color      : $pink;
+    }
+}
+// Pagination styles 
+
+#pagination {
+    text-align:center;
+    .page-options {
+
+        display            : inline-block;
+        -webkit-box-shadow : 0px 2px 5px 1px rgba(122,120,120,0.56);
+        box-shadow         : 0px 2px 5px 1px rgba(122,120,120,0.56);
+         
+
+        li{
+            padding : 20px;
+            display: inline-block;
+            
+            &.active {
+                background: $darkgrey;
+                transition: 0.5s ease-in-out;
+                font-weight:700;
+            }
+            
+            // &.active:hover {
+            //     background: #fff;
+            //     transition: 0.5s ease-in-out;
+            // }
+
+            &:hover {
+                background: $lucidgrey;
+                transition: 0.5s ease-in-out;
+                font-weight:700;
+                cursor:pointer;
+            }
+        }
+    }
+
+}
+
+
+.col-md-3 {
+    width           : 25%;
+    display         : inline-block;
+    vertical-align  : top;
+    padding         : 30px 55px;
+}
+
+.col-md-9 {
+    width   : 75%;
+    display : inline-block; 
+}
